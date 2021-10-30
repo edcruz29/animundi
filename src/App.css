@@ -1,38 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+body{
+  background-image: linear-gradient( 
+    108deg, rgba(31, 35, 38, 0.9906163148853291) 0%, rgba(26, 10, 12, 0.857) 54%, rgba(15, 44, 50, 1) 100% ), url('./img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .App {
   text-align: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title{
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 8px;
+  color:#FF4656;
+}
+.carregando{
+  color: #FF4656;;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.input{
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 2rem;
+  color:#FF4656;
+  background-color: #1F2326;
+}
+.lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1.7rem;
+  padding: 10px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-lg {
+  border: 2px solid #FF4656;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 10px;
+  padding: 25px;
+
+}
+.lista__display img {
+  margin-top: 20px;
+  border-radius: 10px;
+  max-width: 100%;
+  border: 1px solid #FF4656;
+  cursor: pointer;
+}
+.lista__display:hover img {
+  transform: scale(1.1);
+  transition: 1s all ease;
+}
+.lista__display p {
+  margin-top: 10px;
+  color:#fff
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pagination{
   display: flex;
-  flex-direction: column;
+  list-style: none;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 5px;
+  
+  
 }
-
-.App-link {
-  color: #61dafb;
+.pagination li+li{
+  margin-left: 1rem;
+  
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination__item{
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color:#FF4656;
+  background-color:#1F2326 ;
+}
+.pagination__item--next,.pagination__item--back{
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  height: 30px;
+  cursor: pointer;
+  color:#FF4656;
+  background-color:#1F2326 ;
+}
+.pagination__item--active{
+  background-color:#FF4656;
+  color:#1F2326;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.pagination__item--active:focus{
+  outline: none;
 }
