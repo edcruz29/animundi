@@ -5,7 +5,7 @@ import Pagination from "./components/Pagination";
 import SearchInput from "./components/SearchInput";
 
 const api = "https://kitsu.io/api/edge/";
-const limit = 15
+const limit = 15;
 
 function App() {
   const [text, setText] = useState("");
@@ -13,42 +13,35 @@ function App() {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
-      //setInfo({});
-      const query = {
-        page:{
-          limit,
-          offset,
-        }
+    //setInfo({});
+    const query = {
+      page: {
+        limit,
+        offset,
+      },
+    };
+
+    if (text) {
+      query.filter = {
+        text,
       };
+    }
 
-      if(text){
-        query.filter = {
-          text,
-        };
-      }
-
-
-      fetch(`${api}anime?${qs.stringify(query)}`).then(
-        (response) =>
-          response.json().then((response) => {
-            setInfo(response);
-          })
-      );
-    
+    fetch(`${api}anime?${qs.stringify(query)}`).then((response) =>
+      response.json().then((response) => {
+        setInfo(response);
+      })
+    );
   }, [text, offset]);
 
   return (
     <div className="App">
       <h1 className="title">Animundi</h1>
-      <SearchInput value={text} 
-      onChange={(search) => 
-      setText(search)} 
-      />
-      {text && !info.data &&(
+      <SearchInput value={text} onChange={(search) => setText(search)} />
+      {text && !info.data && (
         <div>
           <span className="carregando">Carregando...</span>
         </div>
-        
       )}
       {info.data && (
         <div className="container-lg">
@@ -63,18 +56,16 @@ function App() {
               </li>
             ))}
           </ul>
-          
         </div>
       )}
-      {info.meta&&(
-        <Pagination 
-          limit={limit} 
-          total={info.meta.count} 
+      {info.meta && (
+        <Pagination
+          limit={limit}
+          total={info.meta.count}
           offset={offset}
-          setOffset = {setOffset}
+          setOffset={setOffset}
         />
       )}
-      
     </div>
   );
 }

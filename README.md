@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Animundi
+
+Projeto para catalogar animes consumindo a API https://kitsu.io/api/edge/
+Foram criados componentes, um Debounce para melhorar a pesquisa dos animes e lógica para criação da paginação.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -2,39 +2,41 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  
+  font-family: "Montserrat", sans-serif;
 }
-
-body{
-  background-image: linear-gradient( 
-    108deg, rgba(31, 35, 38, 0.9906163148853291) 0%, rgba(26, 10, 12, 0.857) 54%, rgba(15, 44, 50, 1) 100% ), url('./img/background.jpg');
+body {
+  background-image: linear-gradient(
+      108deg,
+      rgba(31, 35, 38, 0.9906163148853291) 0%,
+      rgba(26, 10, 12, 0.857) 54%,
+      rgba(15, 44, 50, 1) 100%
+    ),
+    url("./img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .App {
   text-align: center;
-  
 }
 
-.title{
+.title {
   font-size: 3rem;
   font-weight: bold;
   padding: 8px;
-  color:#FF4656;
+  color: #ff4656;
 }
-.carregando{
-  color: #FF4656;;
+.carregando {
+  color: #ff4656;
   margin-left: 10px;
   font-size: 16px;
 }
-.input{
+.input {
   border-radius: 5px;
   padding: 5px;
   font-size: 16px;
   margin-bottom: 2rem;
-  color:#FF4656;
-  background-color: #1F2326;
+  color: #ff4656;
+  background-color: #1f2326;
 }
 .lista {
   list-style: none;
@@ -42,22 +44,19 @@ body{
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1.7rem;
   padding: 10px;
-
 }
-
 .container-lg {
-  border: 2px solid #FF4656;
+  border: 2px solid #ff4656;
   border-radius: 10px;
   max-width: 1200px;
   margin: 0 10px;
   padding: 25px;
-
 }
 .lista__display img {
   margin-top: 20px;
   border-radius: 10px;
   max-width: 100%;
-  border: 1px solid #FF4656;
+  border: 1px solid #ff4656;
   cursor: pointer;
 }
 .lista__display:hover img {
@@ -66,44 +65,41 @@ body{
 }
 .lista__display p {
   margin-top: 10px;
-  color:#fff
+  color: #fff;
 }
 
-.pagination{
+.pagination {
   display: flex;
   list-style: none;
   align-items: center;
   justify-content: center;
   margin-top: 5px;
-  
-  
 }
-.pagination li+li{
+.pagination li + li {
   margin-left: 1rem;
-  
-  
 }
-.pagination__item{
+.pagination__item {
   width: 30px;
   height: 30px;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  color:#FF4656;
-  background-color:#1F2326 ;
+  color: #ff4656;
+  background-color: #1f2326;
 }
-.pagination__item--next,.pagination__item--back{
+.pagination__item--next,
+.pagination__item--back {
   width: 100%;
   padding: 5px;
   border-radius: 5px;
   height: 30px;
   cursor: pointer;
-  color:#FF4656;
-  background-color:#1F2326 ;
+  color: #ff4656;
+  background-color: #1f2326;
 }
-.pagination__item--active{
-  background-color:#FF4656;
-  color:#1F2326;
+.pagination__item--active {
+  background-color: #ff4656;
+  color: #1f2326;
   width: 35px;
   height: 35px;
   border-radius: 5px;
@@ -112,6 +108,6 @@ body{
   border: none;
   cursor: pointer;
 }
-.pagination__item--active:focus{
+.pagination__item--active:focus {
   outline: none;
 }
