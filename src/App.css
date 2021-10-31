@@ -52,7 +52,7 @@ body {
   margin: 0 auto;
   padding: 25px;
 }
-.lista__display img {
+.lista__display img, .imgDetalhe {
   margin-top: 20px;
   border-radius: 10px;
   max-width: 100%;
@@ -63,7 +63,7 @@ body {
   transform: scale(1.1);
   transition: 1s all ease;
 }
-.lista__display p {
+.lista__display p, .detalhe{
   margin-top: 10px;
   color: #fff;
 }
@@ -110,4 +110,18 @@ body {
 }
 .pagination__item--active:focus {
   outline: none;
+}
+.text{
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.text p{
+  text-align: justify;
+}
+.text span{
+  font-weight: bold;
 }
