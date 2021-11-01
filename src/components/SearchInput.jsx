@@ -10,7 +10,15 @@ const SearchInput = ({ value, onChange }) => {
     debouncedChange(event.target.value);
   }
 
-  return <input className="input" placeholder="insira o nome do anime" type="search" value={displayValue} onChange={handleChange} />;
+  return (
+    <input
+      className="input"
+      placeholder="insira o nome do anime"
+      type="search"
+      value={displayValue}
+      onChange={handleChange}
+    />
+  );
 };
 
 export default SearchInput;
